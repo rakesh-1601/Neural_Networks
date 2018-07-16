@@ -99,7 +99,6 @@ def build_model(nn_hdim, num_passes=20000, print_loss=False):
         b2 += -epsilon * db2
         # Assign new parameters to the model
         model = {'W1': W1, 'b1': b1, 'W2': W2, 'b2': b2}
-
     return model
 
 # Build a model with a 3-dimensional hidden layer
@@ -112,4 +111,5 @@ print("Loss after all iteration %f" % ( calculate_loss(model)))
 # Plot the decision boundary
 plot_decision_boundary(lambda x: predict(model, x))
 plt.title("Decision Boundary for hidden layer size 3")
+plt.legends()
 plt.show()

@@ -1,2 +1,3 @@
 # Neural_Networks
-neural network from scratch in python
+Neural Network from scratch in python
+Using forward and backward propagation

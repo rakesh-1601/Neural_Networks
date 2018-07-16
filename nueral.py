@@ -10,6 +10,7 @@ import sklearn.linear_model
 import matplotlib
 
 #Creating datasets
+#any randow dataset will do
 np.random.seed(3)
 X, y = sklearn.datasets.make_moons(200, noise=0.20)
 plt.scatter(X[:, 0], X[:, 1], s=40, c=y, cmap=plt.cm.Spectral)
@@ -72,6 +73,7 @@ def build_model(nn_hdim, num_passes=20000, print_loss=False):
     b2 = np.zeros((1, nn_output_dim))
 
     # This is what we return at the end
+    # It contains all the optimized values of weights
     model = {}
     # Gradient descent. For each batch...
     for i in range(0, num_passes):
